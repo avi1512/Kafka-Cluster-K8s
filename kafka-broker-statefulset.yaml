@@ -21,7 +21,7 @@ metadata:
     app: kafka-broker
   namespace: kafka-cluster
   annotations:
-    kubernetes.io/change-cause: "Deploying Kafka Broker Latest Version"
+    kubernetes.io/change-cause: "Deploying Kafka Broker 3.3.1-deb-11-r13"
 spec:
   serviceName: kafka-broker-svc
   replicas: 2
@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: kafka
-        image: docker.io/bitnami/kafka
+        image: docker.io/bitnami/kafka:3.3.1-debian-11-r13
         ports:
         - containerPort: 9092
         env:

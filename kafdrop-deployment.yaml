@@ -6,7 +6,7 @@ metadata:
     app: kafdrop
   namespace: kafka-cluster
   annotations:
-    kubernetes.io/change-cause: "Deploying Kafdrop 3.27.0"
+    kubernetes.io/change-cause: "Deploying Kafdrop 3.31.0-SNAPSHOT"
 spec:
   replicas: 1
   selector:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: kafdrop
-        image: docker.io/obsidiandynamics/kafdrop
+        image: docker.io/obsidiandynamics/kafdrop:3.31.0-SNAPSHOT
         ports:
         - containerPort: 9000
         env:

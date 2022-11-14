@@ -6,7 +6,7 @@ metadata:
     app: kafdrop
   namespace: kafka-cluster
   annotations:
-    kubernetes.io/change-cause: "Deploying Kafdrop 3.31.0-SNAPSHOT"
+    kubernetes.io/change-cause: "Deploying Kafdrop 3.27.0"
 spec:
   replicas: 1
   selector:
@@ -24,7 +24,7 @@ spec:
         - containerPort: 9000
         env:
         - name: KAFKA_BROKERCONNECT
-          value: kafka-broker-svc:9092
+          value: kafka-broker-svc1:9092,kafka-broker-svc2:9092
 ---
 apiVersion: v1
 kind: Service
